@@ -4,24 +4,25 @@ using UnityEngine.Video;
 public class TVController : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
-
-    bool tvEncendida = false;
+    bool tvEncendida;
+    void Start()
+    {
+        Debug.Log("TVController activo");
+    }
 
     public void ToggleTV()
     {
-        Debug.Log("Se presionó la TV");
+        tvEncendida = !tvEncendida;
 
-        if (tvEncendida == false)
+        if (tvEncendida)
         {
             Debug.Log("TV ENCENDIDA");
             videoPlayer.Play();
-            tvEncendida = true;
         }
         else
         {
             Debug.Log("TV APAGADA");
             videoPlayer.Stop();
-            tvEncendida = false;
         }
     }
 }
