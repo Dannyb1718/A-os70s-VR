@@ -3,13 +3,22 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class DesktopClickSelect : MonoBehaviour
+public class DesktopXRInteractor : MonoBehaviour
 {
-    private XRRayInteractor rayInteractor;
+    public XRRayInteractor rayInteractor;
+
+    public float scrollSpeed = 2f;
+    public float minDistance = 1f;
+    public float maxDistance = 10f;
+
+    private IXRSelectInteractable currentObject;
+    private IXRSelectInteractor interactor;
+
+    private float currentDistance;
 
     void Start()
     {
-        rayInteractor = GetComponent<XRRayInteractor>();
+        interactor = rayInteractor as IXRSelectInteractor;
     }
 
     void Update()
@@ -17,42 +26,52 @@ public class DesktopClickSelect : MonoBehaviour
         if (rayInteractor == null)
             return;
 
+        HandleGrab();
+        HandleScroll();
+    }
+
+    void HandleGrab()
+    {
         if (Input.GetMouseButtonDown(0))
         {
-            TrySelect();
+            if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+            {
+                var interactable = hit.collider.GetComponentInParent<IXRSelectInteractable>();
+
+                if (interactable != null)
+                {
+                    currentObject = interactable;
+
+                    rayInteractor.interactionManager.SelectEnter(interactor, interactable);
+
+                    currentDistance = hit.distance;
+                }
+            }
         }
 
         if (Input.GetMouseButtonUp(0))
         {
-            TryDeselect();
-        }
-    }
-
-    void TrySelect()
-    {
-        if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
-        {
-            var interactable = hit.collider.GetComponentInParent<IXRSelectInteractable>();
-            var interactor = rayInteractor as IXRSelectInteractor;
-
-            if (interactable != null && interactor != null)
+            if (currentObject != null)
             {
-                rayInteractor.interactionManager.SelectEnter(interactor, interactable);
+                rayInteractor.interactionManager.SelectExit(interactor, currentObject);
+                currentObject = null;
             }
         }
     }
 
-    void TryDeselect()
+    void HandleScroll()
     {
-        if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
-        {
-            var interactable = hit.collider.GetComponentInParent<IXRSelectInteractable>();
-            var interactor = rayInteractor as IXRSelectInteractor;
+        if (currentObject == null)
+            return;
 
-            if (interactable != null && interactor != null)
-            {
-                rayInteractor.interactionManager.SelectExit(interactor, interactable);
-            }
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scroll != 0)
+        {
+            currentDistance += scroll * scrollSpeed;
+            currentDistance = Mathf.Clamp(currentDistance, minDistance, maxDistance);
+
+            rayInteractor.attachTransform.localPosition = new Vector3(0, 0, currentDistance);
         }
     }
 }
