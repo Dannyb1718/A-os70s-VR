@@ -1977,6 +1977,352 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ea36d3a4f3cc394fbb1868df3c2bebe, type: 3}
+--- !u!1 &188408220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 1932363121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &188408225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188408220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd1304035895204aa92b4d6395025a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DesktopXRInteractor
+  rayInteractor: {fileID: 188408226}
+  scrollSpeed: 2
+  minDistance: 1
+  maxDistance: 10
+--- !u!114 &188408226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188408220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor
+  m_InteractionManager: {fileID: 0}
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_Handedness: 0
+  m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_SelectInput:
+    m_InputSourceMode: 2
+    m_InputActionPerformed:
+      m_Name: Select
+      m_Type: 1
+      m_ExpectedControlType: 
+      m_Id: 398450a8-d158-462f-9919-8e73f478334b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionValue:
+      m_Name: Select Value
+      m_Type: 0
+      m_ExpectedControlType: Axis
+      m_Id: dd35fa58-861b-4de1-943c-1fc4f8e97c7e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReferencePerformed: {fileID: 0}
+    m_InputActionReferenceValue: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualPerformed: 0
+    m_ManualValue: 0
+    m_ManualQueuePerformed: 0
+    m_ManualQueueWasPerformedThisFrame: 0
+    m_ManualQueueWasCompletedThisFrame: 0
+    m_ManualQueueValue: 0
+    m_ManualQueueTargetFrame: 0
+  m_ActivateInput:
+    m_InputSourceMode: 2
+    m_InputActionPerformed:
+      m_Name: Activate
+      m_Type: 1
+      m_ExpectedControlType: 
+      m_Id: 1e880e17-0225-42c4-aa0b-091413a8d278
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionValue:
+      m_Name: Activate Value
+      m_Type: 0
+      m_ExpectedControlType: Axis
+      m_Id: 6a100ae3-1f4d-42c6-a8d3-911322e827d2
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReferencePerformed: {fileID: 0}
+    m_InputActionReferenceValue: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualPerformed: 0
+    m_ManualValue: 0
+    m_ManualQueuePerformed: 0
+    m_ManualQueueWasPerformedThisFrame: 0
+    m_ManualQueueWasCompletedThisFrame: 0
+    m_ManualQueueValue: 0
+    m_ManualQueueTargetFrame: 0
+  m_SelectActionTrigger: 1
+  m_AllowHoveredActivate: 0
+  m_TargetPriorityMode: 0
+  m_HideControllerOnSelect: 0
+  m_InputCompatibilityMode: 0
+  m_PlayAudioClipOnSelectEntered: 0
+  m_AudioClipForOnSelectEntered: {fileID: 0}
+  m_PlayAudioClipOnSelectExited: 0
+  m_AudioClipForOnSelectExited: {fileID: 0}
+  m_PlayAudioClipOnSelectCanceled: 0
+  m_AudioClipForOnSelectCanceled: {fileID: 0}
+  m_PlayAudioClipOnHoverEntered: 0
+  m_AudioClipForOnHoverEntered: {fileID: 0}
+  m_PlayAudioClipOnHoverExited: 0
+  m_AudioClipForOnHoverExited: {fileID: 0}
+  m_PlayAudioClipOnHoverCanceled: 0
+  m_AudioClipForOnHoverCanceled: {fileID: 0}
+  m_AllowHoverAudioWhileSelecting: 1
+  m_PlayHapticsOnSelectEntered: 0
+  m_HapticSelectEnterIntensity: 0
+  m_HapticSelectEnterDuration: 0
+  m_PlayHapticsOnSelectExited: 0
+  m_HapticSelectExitIntensity: 0
+  m_HapticSelectExitDuration: 0
+  m_PlayHapticsOnSelectCanceled: 0
+  m_HapticSelectCancelIntensity: 0
+  m_HapticSelectCancelDuration: 0
+  m_PlayHapticsOnHoverEntered: 0
+  m_HapticHoverEnterIntensity: 0
+  m_HapticHoverEnterDuration: 0
+  m_PlayHapticsOnHoverExited: 0
+  m_HapticHoverExitIntensity: 0
+  m_HapticHoverExitDuration: 0
+  m_PlayHapticsOnHoverCanceled: 0
+  m_HapticHoverCancelIntensity: 0
+  m_HapticHoverCancelDuration: 0
+  m_AllowHoverHapticsWhileSelecting: 1
+  m_LineType: 0
+  m_BlendVisualLinePoints: 1
+  m_MaxRaycastDistance: 30
+  m_RayOriginTransform: {fileID: 0}
+  m_ReferenceFrame: {fileID: 0}
+  m_Velocity: 16
+  m_Acceleration: 9.8
+  m_AdditionalGroundHeight: 0.1
+  m_AdditionalFlightTime: 0.5
+  m_EndPointDistance: 30
+  m_EndPointHeight: -10
+  m_ControlPointDistance: 10
+  m_ControlPointHeight: 5
+  m_SampleFrequency: 20
+  m_HitDetectionType: 0
+  m_SphereCastRadius: 0.1
+  m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
+  m_RaycastMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
+  m_RaycastSnapVolumeInteraction: 1
+  m_HitClosestOnly: 0
+  m_HoverToSelect: 0
+  m_HoverTimeToSelect: 0.5
+  m_AutoDeselect: 0
+  m_TimeToAutoDeselect: 3
+  m_EnableUIInteraction: 1
+  m_BlockInteractionsWithScreenSpaceUI: 0
+  m_BlockUIOnInteractableSelection: 1
+  m_ManipulateAttachTransform: 1
+  m_UseForceGrab: 0
+  m_RotateSpeed: 180
+  m_TranslateSpeed: 1
+  m_RotateReferenceFrame: {fileID: 0}
+  m_RotateMode: 0
+  m_UIHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_UIHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_EnableARRaycasting: 0
+  m_OccludeARHitsWith3DObjects: 0
+  m_OccludeARHitsWith2DObjects: 0
+  m_ScaleMode: 0
+  m_UIPressInput:
+    m_InputSourceMode: 2
+    m_InputActionPerformed:
+      m_Name: UI Press
+      m_Type: 1
+      m_ExpectedControlType: 
+      m_Id: 46b68f7b-94b7-4326-91c5-0b64214c8527
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionValue:
+      m_Name: UI Press Value
+      m_Type: 0
+      m_ExpectedControlType: Axis
+      m_Id: 85c8f1b6-9061-48fa-b5d2-9a623326f8d4
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReferencePerformed: {fileID: 0}
+    m_InputActionReferenceValue: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualPerformed: 0
+    m_ManualValue: 0
+    m_ManualQueuePerformed: 0
+    m_ManualQueueWasPerformedThisFrame: 0
+    m_ManualQueueWasCompletedThisFrame: 0
+    m_ManualQueueValue: 0
+    m_ManualQueueTargetFrame: 0
+  m_UIScrollInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: UI Scroll
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: bf596d7f-2e2f-4296-b4cb-7e4259e08b1d
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: {x: 0, y: 0}
+  m_TranslateManipulationInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: Translate Manipulation
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 1dba470f-03b0-4705-9a54-14700ad07887
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: {x: 0, y: 0}
+  m_RotateManipulationInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: Rotate Manipulation
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: ba93b8b9-4110-4777-9db2-758d48c8750e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: {x: 0, y: 0}
+  m_DirectionalManipulationInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: Directional Manipulation
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 9d01dfb5-9c25-458b-80c7-a2b98508b3c1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: {x: 0, y: 0}
+  m_ScaleToggleInput:
+    m_InputSourceMode: 2
+    m_InputActionPerformed:
+      m_Name: Scale Toggle
+      m_Type: 1
+      m_ExpectedControlType: 
+      m_Id: 76ba7702-9bdf-49e8-a228-5d13d6998696
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionValue:
+      m_Name: Scale Toggle Value
+      m_Type: 0
+      m_ExpectedControlType: Axis
+      m_Id: 8701ade8-9669-44d9-b259-874665d4b798
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReferencePerformed: {fileID: 0}
+    m_InputActionReferenceValue: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualPerformed: 0
+    m_ManualValue: 0
+    m_ManualQueuePerformed: 0
+    m_ManualQueueWasPerformedThisFrame: 0
+    m_ManualQueueWasCompletedThisFrame: 0
+    m_ManualQueueValue: 0
+    m_ManualQueueTargetFrame: 0
+  m_ScaleOverTimeInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: Scale Over Time
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: ed07fd28-992b-41ef-9dd4-e023b1b6666a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: {x: 0, y: 0}
+  m_ScaleDistanceDeltaInput:
+    m_InputSourceMode: 0
+    m_InputAction:
+      m_Name: Scale Distance Delta
+      m_Type: 0
+      m_ExpectedControlType: Axis
+      m_Id: 53e17707-a1a6-45a0-8524-c93ce549682c
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: 0
 --- !u!4 &189379731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7299013555199226531, guid: 0970805ba9061424ebdf40d6021674c7, type: 3}
@@ -17175,14 +17521,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2025642596}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 756589172}
+    - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 188408226}
+    - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 188408225}
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
 --- !u!1001 &1935136441
 PrefabInstance:
@@ -18275,376 +18624,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a0dc12702f60844871d8400620b48b, type: 3}
---- !u!1 &2025642595
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2025642596}
-  - component: {fileID: 2025642597}
-  - component: {fileID: 2025642598}
-  m_Layer: 0
-  m_Name: DesktopRay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2025642596
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025642595}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 756589171}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2025642597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025642595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor
-  m_InteractionManager: {fileID: 0}
-  m_InteractionLayers:
-    m_Bits: 4294967295
-  m_Handedness: 0
-  m_AttachTransform: {fileID: 0}
-  m_KeepSelectedTargetValid: 1
-  m_DisableVisualsWhenBlockedInGroup: 1
-  m_StartingSelectedInteractable: {fileID: 0}
-  m_StartingTargetFilter: {fileID: 0}
-  m_AutoFindParentInteractableInHierarchy: 0
-  m_ParentInteractableObject: {fileID: 0}
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_SelectInput:
-    m_InputSourceMode: 2
-    m_InputActionPerformed:
-      m_Name: Select
-      m_Type: 1
-      m_ExpectedControlType: 
-      m_Id: 22ba2f3e-5941-46e4-ac3a-9837a56e0541
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionValue:
-      m_Name: Select Value
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: a76d3a1a-3f19-44b2-870f-acb9af994b6a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 0}
-    m_InputActionReferenceValue: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualPerformed: 0
-    m_ManualValue: 0
-    m_ManualQueuePerformed: 0
-    m_ManualQueueWasPerformedThisFrame: 0
-    m_ManualQueueWasCompletedThisFrame: 0
-    m_ManualQueueValue: 0
-    m_ManualQueueTargetFrame: 0
-  m_ActivateInput:
-    m_InputSourceMode: 2
-    m_InputActionPerformed:
-      m_Name: Activate
-      m_Type: 1
-      m_ExpectedControlType: 
-      m_Id: 6bac3736-e932-4fe6-ae43-1e1882706afa
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionValue:
-      m_Name: Activate Value
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: 1f2ec161-924a-45f4-9119-721237b94255
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 0}
-    m_InputActionReferenceValue: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualPerformed: 0
-    m_ManualValue: 0
-    m_ManualQueuePerformed: 0
-    m_ManualQueueWasPerformedThisFrame: 0
-    m_ManualQueueWasCompletedThisFrame: 0
-    m_ManualQueueValue: 0
-    m_ManualQueueTargetFrame: 0
-  m_SelectActionTrigger: 1
-  m_AllowHoveredActivate: 0
-  m_TargetPriorityMode: 0
-  m_HideControllerOnSelect: 0
-  m_InputCompatibilityMode: 0
-  m_PlayAudioClipOnSelectEntered: 0
-  m_AudioClipForOnSelectEntered: {fileID: 0}
-  m_PlayAudioClipOnSelectExited: 0
-  m_AudioClipForOnSelectExited: {fileID: 0}
-  m_PlayAudioClipOnSelectCanceled: 0
-  m_AudioClipForOnSelectCanceled: {fileID: 0}
-  m_PlayAudioClipOnHoverEntered: 0
-  m_AudioClipForOnHoverEntered: {fileID: 0}
-  m_PlayAudioClipOnHoverExited: 0
-  m_AudioClipForOnHoverExited: {fileID: 0}
-  m_PlayAudioClipOnHoverCanceled: 0
-  m_AudioClipForOnHoverCanceled: {fileID: 0}
-  m_AllowHoverAudioWhileSelecting: 1
-  m_PlayHapticsOnSelectEntered: 0
-  m_HapticSelectEnterIntensity: 0
-  m_HapticSelectEnterDuration: 0
-  m_PlayHapticsOnSelectExited: 0
-  m_HapticSelectExitIntensity: 0
-  m_HapticSelectExitDuration: 0
-  m_PlayHapticsOnSelectCanceled: 0
-  m_HapticSelectCancelIntensity: 0
-  m_HapticSelectCancelDuration: 0
-  m_PlayHapticsOnHoverEntered: 0
-  m_HapticHoverEnterIntensity: 0
-  m_HapticHoverEnterDuration: 0
-  m_PlayHapticsOnHoverExited: 0
-  m_HapticHoverExitIntensity: 0
-  m_HapticHoverExitDuration: 0
-  m_PlayHapticsOnHoverCanceled: 0
-  m_HapticHoverCancelIntensity: 0
-  m_HapticHoverCancelDuration: 0
-  m_AllowHoverHapticsWhileSelecting: 1
-  m_LineType: 0
-  m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 30
-  m_RayOriginTransform: {fileID: 0}
-  m_ReferenceFrame: {fileID: 0}
-  m_Velocity: 16
-  m_Acceleration: 9.8
-  m_AdditionalGroundHeight: 0.1
-  m_AdditionalFlightTime: 0.5
-  m_EndPointDistance: 30
-  m_EndPointHeight: -10
-  m_ControlPointDistance: 10
-  m_ControlPointHeight: 5
-  m_SampleFrequency: 20
-  m_HitDetectionType: 0
-  m_SphereCastRadius: 0.1
-  m_ConeCastAngle: 6
-  m_LiveConeCastDebugVisuals: 0
-  m_RaycastMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
-  m_RaycastSnapVolumeInteraction: 1
-  m_HitClosestOnly: 0
-  m_HoverToSelect: 0
-  m_HoverTimeToSelect: 0.5
-  m_AutoDeselect: 0
-  m_TimeToAutoDeselect: 3
-  m_EnableUIInteraction: 1
-  m_BlockInteractionsWithScreenSpaceUI: 0
-  m_BlockUIOnInteractableSelection: 1
-  m_ManipulateAttachTransform: 1
-  m_UseForceGrab: 0
-  m_RotateSpeed: 180
-  m_TranslateSpeed: 1
-  m_RotateReferenceFrame: {fileID: 0}
-  m_RotateMode: 0
-  m_UIHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_UIHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_EnableARRaycasting: 0
-  m_OccludeARHitsWith3DObjects: 0
-  m_OccludeARHitsWith2DObjects: 0
-  m_ScaleMode: 0
-  m_UIPressInput:
-    m_InputSourceMode: 2
-    m_InputActionPerformed:
-      m_Name: UI Press
-      m_Type: 1
-      m_ExpectedControlType: 
-      m_Id: 5324e387-f0a6-4ed0-8792-0adc3848ac50
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionValue:
-      m_Name: UI Press Value
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: c734990c-47a4-4795-88e4-35adde30328d
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 0}
-    m_InputActionReferenceValue: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualPerformed: 0
-    m_ManualValue: 0
-    m_ManualQueuePerformed: 0
-    m_ManualQueueWasPerformedThisFrame: 0
-    m_ManualQueueWasCompletedThisFrame: 0
-    m_ManualQueueValue: 0
-    m_ManualQueueTargetFrame: 0
-  m_UIScrollInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: UI Scroll
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: e36d694f-ac20-49a2-94c6-b77e3b76c5b5
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-  m_TranslateManipulationInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Translate Manipulation
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: fd387ea9-211c-4fba-b79b-5fe8ca05b1dd
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-  m_RotateManipulationInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Rotate Manipulation
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 6a7d9ed4-a1cf-44fc-917f-90eb512d0291
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-  m_DirectionalManipulationInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Directional Manipulation
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 1ed2a1ee-9e53-4084-b4f3-145b1d623681
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-  m_ScaleToggleInput:
-    m_InputSourceMode: 2
-    m_InputActionPerformed:
-      m_Name: Scale Toggle
-      m_Type: 1
-      m_ExpectedControlType: 
-      m_Id: a8ce2341-5785-480a-9271-7a0c7c13c0fb
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionValue:
-      m_Name: Scale Toggle Value
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: d12add07-0a22-4d44-adca-b256d12002ba
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 0}
-    m_InputActionReferenceValue: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualPerformed: 0
-    m_ManualValue: 0
-    m_ManualQueuePerformed: 0
-    m_ManualQueueWasPerformedThisFrame: 0
-    m_ManualQueueWasCompletedThisFrame: 0
-    m_ManualQueueValue: 0
-    m_ManualQueueTargetFrame: 0
-  m_ScaleOverTimeInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Scale Over Time
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: e5ab8db7-03dc-4ce0-8117-c500e4206acf
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-  m_ScaleDistanceDeltaInput:
-    m_InputSourceMode: 0
-    m_InputAction:
-      m_Name: Scale Distance Delta
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: bc93553b-f557-4228-bbfe-055dccad0a5a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 0}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: 0
---- !u!114 &2025642598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025642595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dd1304035895204aa92b4d6395025a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DesktopClickSelect
 --- !u!4 &2035473130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3953970342314940649, guid: 2ea572d587ee60f44bd5baa3bc2d6503, type: 3}
