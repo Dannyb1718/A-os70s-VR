@@ -3,95 +3,156 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// Singleton that controls dialogue flow.
-/// Attach to a persistent GameObject in your scene (e.g. "DialogueManager").
+/// Singleton que controla el flujo completo del diálogo con opciones de respuesta.
+///
+/// Estados internos:
+///   OpeningLines  →  mostrando las líneas de apertura del NPC
+///   WaitingChoice →  esperando que el jugador elija una opción
+///   ResponseLines →  mostrando las líneas de respuesta del NPC tras la elección
 /// </summary>
 public class DialogueManager : MonoBehaviour
 {
-    // ─── Singleton ────────────────────────────────────────────────────────────
+    // ── Singleton ──────────────────────────────────────────────────────────────
     public static DialogueManager Instance { get; private set; }
 
-    // ─── Inspector ────────────────────────────────────────────────────────────
-    [Header("References")]
-    [Tooltip("The WorldSpace dialogue panel prefab (or scene object).")]
+    // ── Inspector ──────────────────────────────────────────────────────────────
+    [Header("Referencias")]
+    [Tooltip("Arrastra aquí el DialogueCanvas (World Space).")]
     public DialogueUI dialogueUI;
 
-    [Header("Settings")]
-    [Tooltip("Seconds to wait before the panel appears (optional cinematic feel).")]
-    public float openDelay = 0.1f;
+    [Header("Ajustes")]
+    [Tooltip("Segundos de espera antes de abrir el panel.")]
+    public float openDelay = 0.15f;
 
-    // ─── Events (optional hooks for audio, animations, etc.) ─────────────────
-    [Header("Events")]
+    [Header("Eventos (opcionales)")]
     public UnityEvent onDialogueStart;
     public UnityEvent onDialogueEnd;
 
-    // ─── Private state ────────────────────────────────────────────────────────
-    private DialogueData   _currentData;
-    private int            _lineIndex;
-    private bool           _isOpen;
+    // ── Estado interno ─────────────────────────────────────────────────────────
+    private enum Phase { Idle, OpeningLines, WaitingChoice, ResponseLines }
 
-    // ─── Unity ────────────────────────────────────────────────────────────────
+    private Phase         _phase        = Phase.Idle;
+    private DialogueData  _data;
+    private int           _lineIndex;          // índice dentro de la secuencia activa
+    private string[]      _activeLines;        // apunta a openingLines o responseLines
+
+    // ── Unity ──────────────────────────────────────────────────────────────────
     private void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
     }
 
-    // ─── Public API ───────────────────────────────────────────────────────────
+    // ── API pública ────────────────────────────────────────────────────────────
 
-    /// <summary>
-    /// Called by NPCDialogueTrigger when the player enters range.
-    /// </summary>
+    /// <summary>Abre el diálogo con el NPC dado. Llamado por NPCDialogueTrigger.</summary>
     public void StartDialogue(DialogueData data, Transform npcTransform)
     {
-        if (_isOpen) return;
+        if (_phase != Phase.Idle) return;
 
-        _currentData = data;
-        _lineIndex   = 0;
-        _isOpen      = true;
+        _data      = data;
+        _lineIndex = 0;
 
         StartCoroutine(OpenWithDelay(npcTransform));
         onDialogueStart?.Invoke();
     }
 
     /// <summary>
-    /// Advances to the next line, or closes if finished.
-    /// Wired to the "Continue" button on DialogueUI.
+    /// Avanza a la siguiente línea de la secuencia activa.
+    /// Si es la última, pasa al siguiente estado (choices o cierre).
+    /// Llamado por el botón "Continuar".
     /// </summary>
     public void NextLine()
     {
         _lineIndex++;
 
-        if (_lineIndex >= _currentData.lines.Length)
+        if (_lineIndex < _activeLines.Length)
+        {
+            // Todavía hay líneas en esta secuencia
+            dialogueUI.ShowLine(_data.npcName, _activeLines[_lineIndex]);
+            return;
+        }
+
+        // Fin de la secuencia activa
+        switch (_phase)
+        {
+            case Phase.OpeningLines:
+                TryShowChoices();
+                break;
+
+            case Phase.ResponseLines:
+                EndDialogue();
+                break;
+        }
+    }
+
+    /// <summary>
+    /// Llamado cuando el jugador pulsa uno de los botones de opción.
+    /// index: 0 = primera opción, 1 = segunda opción.
+    /// </summary>
+    public void OnChoiceSelected(int index)
+    {
+        if (_phase != Phase.WaitingChoice) return;
+        if (_data.choices == null || index >= _data.choices.Length) { EndDialogue(); return; }
+
+        DialogueChoice chosen = _data.choices[index];
+
+        if (chosen.isExitChoice || chosen.responseLines == null || chosen.responseLines.Length == 0)
         {
             EndDialogue();
             return;
         }
 
-        dialogueUI.ShowLine(_currentData.npcName, _currentData.lines[_lineIndex]);
+        // Mostrar las líneas de respuesta del NPC
+        _phase       = Phase.ResponseLines;
+        _activeLines = chosen.responseLines;
+        _lineIndex   = 0;
+
+        dialogueUI.HideChoices();
+        dialogueUI.ShowContinueButton(true);
+        dialogueUI.ShowLine(_data.npcName, _activeLines[0]);
     }
 
-    /// <summary>
-    /// Closes the dialogue immediately.
-    /// Wired to the "Exit" button on DialogueUI.
-    /// </summary>
+    /// <summary>Cierra el panel inmediatamente. Llamado por botón Salir o exit choice.</summary>
     public void EndDialogue()
     {
-        if (!_isOpen) return;
+        if (_phase == Phase.Idle) return;
 
-        _isOpen = false;
+        _phase = Phase.Idle;
         dialogueUI.Hide();
         onDialogueEnd?.Invoke();
     }
 
-    public bool IsOpen => _isOpen;
+    public bool IsOpen => _phase != Phase.Idle;
 
-    // ─── Private ──────────────────────────────────────────────────────────────
+    // ── Privados ───────────────────────────────────────────────────────────────
+
     private IEnumerator OpenWithDelay(Transform npcTransform)
     {
+        _phase = Phase.OpeningLines;
+
         yield return new WaitForSeconds(openDelay);
 
+        _activeLines = _data.openingLines;
+        _lineIndex   = 0;
+
         dialogueUI.Show(npcTransform);
-        dialogueUI.ShowLine(_currentData.npcName, _currentData.lines[_lineIndex]);
+        dialogueUI.ShowContinueButton(true);
+        dialogueUI.HideChoices();
+        dialogueUI.ShowLine(_data.npcName, _activeLines[0]);
+    }
+
+    private void TryShowChoices()
+    {
+        if (_data.choices == null || _data.choices.Length == 0)
+        {
+            // Sin opciones: cierra directamente
+            EndDialogue();
+            return;
+        }
+
+        _phase = Phase.WaitingChoice;
+        dialogueUI.ShowContinueButton(false);
+        dialogueUI.ShowChoices(_data.choices);
     }
 }
