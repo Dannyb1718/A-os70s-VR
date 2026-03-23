@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a81eae8aa2b1f047bdf0addc8332c99, type: 3}
+  m_Name: "Manuel Mari\xF1o"
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  npcName: "Manuel Mari\xF1o"
+  openingLines:
+  - "Oye, Juan\n\xBFYa supiste lo del partido ma\xF1ana?"
+  choices:
+  - choiceText: "Espera un segundo \xBFHay partido ma\xF1ana?"
+    isExitChoice: 0
+    responseLines:
+    - "Sisas, en la cancha del potrero a las tres despu\xE9s de misa.\n\nVa a ir
+      todo el pueblo, hasta el profe Gabriel dijo que iba."
+    - Me avisa si viene, justo nos falta 1, no se preocupe por la plata, mi tio nos
+      da para el arbitraje.
+    - Era eso, nos vemos luego, si algo paso por su casa mas tarde con Carlos, y
+      jugamos "Tumba puertas"
+    - 'Y antes que lo menciones. No, no me voy a volver a caer, ya deberian superar
+      eso.
+
+
+      Bueno, vaya a hacer su mandado mas bien.'
+  - choiceText: "\xBFQui\xE9nes van a jugar?"
+    isExitChoice: 1
+    responseLines:
+    - "Los del barrio arriba contra los de la plaza, dicen que juega el \u201CMono\u201D.\nEse
+      man es muy bueno"
+    - Toca que venga, nos falta 1, ya le dije a mi tio que nos prestara para el arbitraje.
+    - Era eso, nos vemos luego, si algo paso por su casa mas tarde y le devuelvo
+      las canicas que me presto.
+  - choiceText: Creo, pero ya vengo estoy ocupado
+    isExitChoice: 1
+    responseLines:
+    - "Bueno pues, no se le haga tarde.\n\nNos vemos ma\xF1ana"

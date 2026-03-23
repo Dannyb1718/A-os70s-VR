@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a81eae8aa2b1f047bdf0addc8332c99, type: 3}
+  m_Name: Padre (Iglesia)
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  npcName: Padre Mauricio
+  openingLines:
+  - 'Buenas tardes, Juan
+
+    Ya se sienten las fiestas en el pueblo.'
+  choices:
+  - choiceText: "\xBFC\xF3mo van las fiestas patronales?"
+    isExitChoice: 0
+    responseLines:
+    - "Vamos avanzando poco a poco, hijo. La gente del pueblo ha ayudado bastante
+      con la organizaci\xF3n y eso se nota en cada detalle."
+    - "Ya casi todo est\xE1 listo para la procesi\xF3n y la misa principal, solo
+      faltan unos \xFAltimos arreglos. Esperamos que todo se d\xE9 en orden y con
+      mucho respeto."
+  - choiceText: "\xBFNecesitan ayuda?"
+    isExitChoice: 1
+    responseLines:
+    - Siempre es bienvenida una mano, hijo. Estamos organizando la iglesia, decorando
+      con flores y preparando todo para recibir a la gente.
+    - "Tambi\xE9n hace falta apoyo en la plaza, donde se reunir\xE1n despu\xE9s de
+      la misa. Si tienes tiempo, puedes acercarte ma\xF1ana temprano."
+  - choiceText: Tengo que hacer una vuelta padre, hasta luego.
+    isExitChoice: 1
+    responseLines:
+    - "Que est\xE9s bien, hijo. Que Dios te acompa\xF1e y te guarde. Nos vemos en
+      las fiestas, y ojal\xE1 puedas acompa\xF1arnos en la celebraci\xF3n."
