@@ -31,7 +31,7 @@ MonoBehaviour:
 
       Bueno, vaya a hacer su mandado mas bien.'
   - choiceText: "\xBFQui\xE9nes van a jugar?"
-    isExitChoice: 1
+    isExitChoice: 0
     responseLines:
     - "Los del barrio arriba contra los de la plaza, dicen que juega el \u201CMono\u201D.\nEse
       man es muy bueno"
