@@ -38969,7 +38969,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939995435}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -39168,7 +39168,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939995435}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ca3dc3f10335caf46adaf302cdfd5dc6, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 698d1168edb65444faeccd58c98552c9, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
