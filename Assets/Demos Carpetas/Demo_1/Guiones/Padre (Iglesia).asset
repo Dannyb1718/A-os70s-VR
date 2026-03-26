@@ -27,14 +27,14 @@ MonoBehaviour:
       faltan unos \xFAltimos arreglos. Esperamos que todo se d\xE9 en orden y con
       mucho respeto."
   - choiceText: "\xBFNecesitan ayuda?"
-    isExitChoice: 1
+    isExitChoice: 0
     responseLines:
     - Siempre es bienvenida una mano, hijo. Estamos organizando la iglesia, decorando
       con flores y preparando todo para recibir a la gente.
     - "Tambi\xE9n hace falta apoyo en la plaza, donde se reunir\xE1n despu\xE9s de
       la misa. Si tienes tiempo, puedes acercarte ma\xF1ana temprano."
   - choiceText: Tengo que hacer una vuelta padre, hasta luego.
-    isExitChoice: 1
+    isExitChoice: 0
     responseLines:
     - "Que est\xE9s bien, hijo. Que Dios te acompa\xF1e y te guarde. Nos vemos en
       las fiestas, y ojal\xE1 puedas acompa\xF1arnos en la celebraci\xF3n."

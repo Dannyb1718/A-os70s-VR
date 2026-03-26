@@ -22,6 +22,6 @@ MonoBehaviour:
     responseLines:
     - Esta es una anegdota de ejemplo
   - choiceText: 'Hasta luego '
-    isExitChoice: 1
+    isExitChoice: 0
     responseLines:
     - Esta es una anegdota de ejemplo

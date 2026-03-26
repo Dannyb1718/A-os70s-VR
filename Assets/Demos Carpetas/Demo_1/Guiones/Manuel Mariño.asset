@@ -38,7 +38,3 @@ MonoBehaviour:
     - Toca que venga, nos falta 1, ya le dije a mi tio que nos prestara para el arbitraje.
     - Era eso, nos vemos luego, si algo paso por su casa mas tarde y le devuelvo
       las canicas que me presto.
-  - choiceText: Creo, pero ya vengo estoy ocupado
-    isExitChoice: 1
-    responseLines:
-    - "Bueno pues, no se le haga tarde.\n\nNos vemos ma\xF1ana"
