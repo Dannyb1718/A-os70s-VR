@@ -6,22 +6,27 @@ public class SceneLoader : MonoBehaviour
 {
     public FadeManager fadeManager;
 
+    public Sprite imagenPatio;
+    public Sprite imagenPueblo;
+
     public void IrAPatioDeJuegos()
     {
-        StartCoroutine(CargarEscena("Patio de juegos"));
+        StartCoroutine(CargarEscena("Patio de juegos", imagenPatio));
     }
     
     public void IrAlPueblo()
     {
-        StartCoroutine(CargarEscena("Principal VR - PC"));
+        StartCoroutine(CargarEscena("Principal VR - PC", imagenPueblo));
     }
 
-    IEnumerator CargarEscena(string nombreEscena)
+    IEnumerator CargarEscena(string nombreEscena, Sprite imagen)
     {
-        // Fade a negro
-        yield return StartCoroutine(fadeManager.FadeOut());
+        // Fade con imagen
+        yield return StartCoroutine(fadeManager.FadeOut(imagen));
 
-        // Cargar escena
+        // Espera opcional para que se vea la imagen
+        yield return new WaitForSeconds(1.5f);
+
         SceneManager.LoadScene(nombreEscena);
     }
 }

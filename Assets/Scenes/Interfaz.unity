@@ -780,6 +780,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
   fadeManager: {fileID: 162133273}
+  imagenPatio: {fileID: 21300000, guid: 20b92da291471834a8a1307c19702e54, type: 3}
+  imagenPueblo: {fileID: 21300000, guid: b30de7f17b5674b49b3d8c9daa3dcefa, type: 3}
 --- !u!4 &242278185
 Transform:
   m_ObjectHideFlags: 0
@@ -4351,7 +4353,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2200, y: 1080}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2117340296
 MonoBehaviour:
