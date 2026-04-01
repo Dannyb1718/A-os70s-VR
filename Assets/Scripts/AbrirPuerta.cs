@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class AbrirPuerta : MonoBehaviour
+public class AbrirCerrarPuerta : MonoBehaviour
 {
     public float anguloApertura = 90f;
     public float velocidad = 2f;
-    private bool abrir = false;
+    private bool abierta = false;
+
     private Quaternion rotacionInicial;
     private Quaternion rotacionFinal;
 
@@ -16,9 +17,14 @@ public class AbrirPuerta : MonoBehaviour
 
     void Update()
     {
-        if (abrir)
+        // Interpolamos hacia la rotación deseada según el estado "abierta"
+        if (abierta)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, rotacionFinal, Time.deltaTime * velocidad);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotacionInicial, Time.deltaTime * velocidad);
         }
     }
 
@@ -26,7 +32,15 @@ public class AbrirPuerta : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            abrir = true;
+            abierta = true; // Abrir al tocar
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            abierta = false; // Cerrar al alejarse
         }
     }
 }

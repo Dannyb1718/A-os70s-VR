@@ -1,30 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GITHUB\\A-os70s-VR\\",
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\radiola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\radiola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|c:\\users\\usuario\\documents\\github\\los 70s\\a-os70s-vr\\assets\\scripts\\puertainteractiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puertainteractiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\tvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\abrirpuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|c:\\users\\usuario\\documents\\github\\los 70s\\a-os70s-vr\\assets\\scripts\\abrirpuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\abrirpuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GITHUB\\A-os70s-VR\\assets\\scripts\\escobabarrido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\escobabarrido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\assets\\controladores\\firstpersoncontroller\\desktopxrinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\controladores\\firstpersoncontroller\\desktopxrinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GITHUB\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\assets\\scripts\\interactionconstraints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactionconstraints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GITHUB\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialogueui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialogueui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Documents\\GITHUB\\Integraci\u00F3nMultimediaAplicaciones3D\\25Y-Ing-Multimedia\\Assets\\Scripts\\NPC\\NPCDialogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\assets\\scripts\\followpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\followpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,78 +37,80 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TVController.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\TVController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TVController.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\TVController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TVController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "NPCDialogo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GITHUB\\Integraci\u00F3nMultimediaAplicaciones3D\\25Y-Ing-Multimedia\\Assets\\Scripts\\NPC\\NPCDialogo.cs",
+              "RelativeDocumentMoniker": "..\\..\\Integraci\u00F3nMultimediaAplicaciones3D\\25Y-Ing-Multimedia\\Assets\\Scripts\\NPC\\NPCDialogo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GITHUB\\Integraci\u00F3nMultimediaAplicaciones3D\\25Y-Ing-Multimedia\\Assets\\Scripts\\NPC\\NPCDialogo.cs",
+              "RelativeToolTip": "..\\..\\Integraci\u00F3nMultimediaAplicaciones3D\\25Y-Ing-Multimedia\\Assets\\Scripts\\NPC\\NPCDialogo.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAgwKUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T03:47:47.627Z",
+              "WhenOpened": "2026-04-01T21:18:17.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Radiola.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\Radiola.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Radiola.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\Radiola.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Radiola.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
+              "Title": "PuertaInteractiva.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Scripts\\PuertaInteractiva.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PuertaInteractiva.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Scripts\\PuertaInteractiva.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PuertaInteractiva.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T03:47:18.081Z",
+              "WhenOpened": "2026-04-01T20:42:14.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EscobaBarrido.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\EscobaBarrido.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EscobaBarrido.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\EscobaBarrido.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EscobaBarrido.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T02:23:51.205Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AbrirPuerta.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\AbrirPuerta.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Scripts\\AbrirPuerta.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AbrirPuerta.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\AbrirPuerta.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Scripts\\AbrirPuerta.cs",
               "RelativeToolTip": "Assets\\Scripts\\AbrirPuerta.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAABIAAAAAAAAAAAAgwC0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T22:24:13.882Z",
+              "WhenOpened": "2026-04-01T20:37:47.526Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DialogueManager.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T21:38:40.971Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "DialogueUI.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueUI.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueUI.cs",
-              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueUI.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAABQwIMAAAAJAAAAAAAAAA==",
+              "Title": "FollowPoints.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Scripts\\FollowPoints.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FollowPoints.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Scripts\\FollowPoints.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FollowPoints.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:51:22.303Z"
+              "WhenOpened": "2026-04-01T19:02:45.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InteractionConstraints.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Scripts\\InteractionConstraints.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InteractionConstraints.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Scripts\\InteractionConstraints.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InteractionConstraints.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T18:04:01.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DesktopXRInteractor.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Controladores\\FirstPersonController\\DesktopXRInteractor.cs",
+              "RelativeDocumentMoniker": "Assets\\Controladores\\FirstPersonController\\DesktopXRInteractor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GITHUB\\Los 70s\\A-os70s-VR\\Assets\\Controladores\\FirstPersonController\\DesktopXRInteractor.cs",
+              "RelativeToolTip": "Assets\\Controladores\\FirstPersonController\\DesktopXRInteractor.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAgwGAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T17:47:15.202Z",
+              "EditorCaption": ""
             }
           ]
         }
