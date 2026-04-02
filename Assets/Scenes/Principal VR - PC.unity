@@ -20893,7 +20893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: 0
   velocidad: 2
-  botonVR: {fileID: 0}
+  botonVR: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!65 &800347283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27561,7 +27561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: -90
   velocidad: 2
-  botonVR: {fileID: 0}
+  botonVR: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!65 &1048292029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27789,7 +27789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: 90
   velocidad: 2
-  botonVR: {fileID: 0}
+  botonVR: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!65 &1054656726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31697,7 +31697,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 62e4374155f26474a9f24cf5d186d634, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 168cfffabafd610429098de652f07d68, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1258895038
 Transform:
@@ -32499,16 +32499,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1301715685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afe3cda3e244f60419474164d6ba3b0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.TrackedDeviceRaycaster
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
   m_IgnoreReversedGraphics: 0
   m_CheckFor2DOcclusion: 0
   m_CheckFor3DOcclusion: 0
-  m_MaxDistance: 1000
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1301757125
 GameObject:
   m_ObjectHideFlags: 0
@@ -40582,7 +40582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: -90
   velocidad: 2
-  botonVR: {fileID: 0}
+  botonVR: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!4 &1654810444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7954721187298275811, guid: 2872c2bc8345b8944a8743aca3ff75e6, type: 3}
@@ -42078,7 +42078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf85218fe942764da2269a894cb5a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCproximidad
-  player: {fileID: 756589171}
+  playerVR: {fileID: 1182303346}
+  playerPC: {fileID: 756589171}
   distanciaActivacion: 8
   animator: {fileID: 1731456560}
   triggerNombre: Waving
@@ -47091,7 +47092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: -90
   velocidad: 2
-  botonVR: {fileID: 0}
+  botonVR: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!65 &1986755827
 BoxCollider:
   m_ObjectHideFlags: 0
