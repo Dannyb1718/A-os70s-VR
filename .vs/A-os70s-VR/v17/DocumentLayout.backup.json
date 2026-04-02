@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\GitHub\\A-os70s-VR\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\interactionconstraints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactionconstraints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\npcproximidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npcproximidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\npcdialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\npcdialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,38 +35,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "InteractionConstraints.cs",
+              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\InteractionConstraints.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InteractionConstraints.cs",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\InteractionConstraints.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InteractionConstraints.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T20:48:59.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DialogueManager.cs",
+              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
+              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAA4wGAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T01:26:54.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "NPCproximidad.cs",
               "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\NPCproximidad.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPCproximidad.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\NPCproximidad.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NPCproximidad.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAA4wFEAAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\NPCproximidad.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\NPCproximidad.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T23:09:51.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "DialogueData.cs",
               "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
               "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
               "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
               "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAwEAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T22:48:42.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T22:48:42.581Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NPCDialogueTrigger.cs",
               "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
               "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
               "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAgwC4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwBAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T22:43:13.009Z"
             }
