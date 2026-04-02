@@ -31,10 +31,12 @@ public class DialogueManager : MonoBehaviour
     // ── Estado interno ─────────────────────────────────────────────────────────
     private enum Phase { Idle, OpeningLines, WaitingChoice, ResponseLines }
 
-    private Phase         _phase        = Phase.Idle;
-    private DialogueData  _data;
-    private int           _lineIndex;          // índice dentro de la secuencia activa
-    private string[]      _activeLines;        // apunta a openingLines o responseLines
+    private Phase _phase = Phase.Idle;
+    private DialogueData _data;
+    private int _lineIndex;
+    private string[] _activeLines;
+
+    private Animator currentNPCAnimator; // 🔥 AÑADIDO
 
     // ── Unity ──────────────────────────────────────────────────────────────────
     private void Awake()
@@ -46,34 +48,28 @@ public class DialogueManager : MonoBehaviour
     // ── API pública ────────────────────────────────────────────────────────────
 
     /// <summary>Abre el diálogo con el NPC dado. Llamado por NPCDialogueTrigger.</summary>
-    public void StartDialogue(DialogueData data, Transform npcTransform)
+    public void StartDialogue(DialogueData data, Transform npcTransform, Animator animator)
     {
         if (_phase != Phase.Idle) return;
 
-        _data      = data;
+        _data = data;
         _lineIndex = 0;
+        currentNPCAnimator = animator; // 🔥 AÑADIDO
 
         StartCoroutine(OpenWithDelay(npcTransform));
         onDialogueStart?.Invoke();
     }
 
-    /// <summary>
-    /// Avanza a la siguiente línea de la secuencia activa.
-    /// Si es la última, pasa al siguiente estado (choices o cierre).
-    /// Llamado por el botón "Continuar".
-    /// </summary>
     public void NextLine()
     {
         _lineIndex++;
 
         if (_lineIndex < _activeLines.Length)
         {
-            // Todavía hay líneas en esta secuencia
             dialogueUI.ShowLine(_data.npcName, _activeLines[_lineIndex]);
             return;
         }
 
-        // Fin de la secuencia activa
         switch (_phase)
         {
             case Phase.OpeningLines:
@@ -86,10 +82,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Llamado cuando el jugador pulsa uno de los botones de opción.
-    /// index: 0 = primera opción, 1 = segunda opción.
-    /// </summary>
     public void OnChoiceSelected(int index)
     {
         if (_phase != Phase.WaitingChoice) return;
@@ -97,23 +89,28 @@ public class DialogueManager : MonoBehaviour
 
         DialogueChoice chosen = _data.choices[index];
 
+        //  AQUÍ SE EJECUTA LA ANIMACIÓN
+        if (currentNPCAnimator != null && !string.IsNullOrEmpty(chosen.animationTrigger))
+        {
+            Debug.Log("Trigger enviado: " + chosen.animationTrigger);
+            currentNPCAnimator.SetTrigger(chosen.animationTrigger);
+        }
+
         if (chosen.isExitChoice || chosen.responseLines == null || chosen.responseLines.Length == 0)
         {
             EndDialogue();
             return;
         }
 
-        // Mostrar las líneas de respuesta del NPC
-        _phase       = Phase.ResponseLines;
+        _phase = Phase.ResponseLines;
         _activeLines = chosen.responseLines;
-        _lineIndex   = 0;
+        _lineIndex = 0;
 
         dialogueUI.HideChoices();
         dialogueUI.ShowContinueButton(true);
         dialogueUI.ShowLine(_data.npcName, _activeLines[0]);
     }
 
-    /// <summary>Cierra el panel inmediatamente. Llamado por botón Salir o exit choice.</summary>
     public void EndDialogue()
     {
         if (_phase == Phase.Idle) return;
@@ -125,8 +122,6 @@ public class DialogueManager : MonoBehaviour
 
     public bool IsOpen => _phase != Phase.Idle;
 
-    // ── Privados ───────────────────────────────────────────────────────────────
-
     private IEnumerator OpenWithDelay(Transform npcTransform)
     {
         _phase = Phase.OpeningLines;
@@ -134,7 +129,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(openDelay);
 
         _activeLines = _data.openingLines;
-        _lineIndex   = 0;
+        _lineIndex = 0;
 
         dialogueUI.Show(npcTransform);
         dialogueUI.ShowContinueButton(true);
@@ -146,7 +141,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (_data.choices == null || _data.choices.Length == 0)
         {
-            // Sin opciones: cierra directamente
             EndDialogue();
             return;
         }

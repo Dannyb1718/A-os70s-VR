@@ -1574,6 +1574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueTrigger
   dialogueData: {fileID: 11400000, guid: fb5043bb4a20f6c49b26454a8ccdaa9c, type: 2}
+  npcAnimator: {fileID: 0}
   autoTriggerRadius: 2
   interactionHint: {fileID: 0}
 --- !u!136 &76947670
@@ -3245,6 +3246,7 @@ MonoBehaviour:
   maxDistance: 10
   rotationSpeed: 1000
   teclaModoRestringido: 101
+  botonVR: {fileID: 0}
 --- !u!114 &188408226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4433,6 +4435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueTrigger
   dialogueData: {fileID: 11400000, guid: 61def0c4f033696409793c4f2b7c64ed, type: 2}
+  npcAnimator: {fileID: 0}
   autoTriggerRadius: 10
   interactionHint: {fileID: 0}
 --- !u!136 &233187249
@@ -15564,6 +15567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueTrigger
   dialogueData: {fileID: 11400000, guid: 18493df752a392144a6af7f3de68f27e, type: 2}
+  npcAnimator: {fileID: 0}
   autoTriggerRadius: 10
   interactionHint: {fileID: 0}
 --- !u!136 &779189265
@@ -16016,6 +16020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: 0
   velocidad: 2
+  botonVR: {fileID: 0}
 --- !u!65 &800347283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19576,6 +19581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueTrigger
   dialogueData: {fileID: 11400000, guid: 96831bbad98ec0b418f40683250dc56e, type: 2}
+  npcAnimator: {fileID: 0}
   autoTriggerRadius: 10
   interactionHint: {fileID: 0}
 --- !u!136 &945891599
@@ -22682,6 +22688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: -90
   velocidad: 2
+  botonVR: {fileID: 0}
 --- !u!65 &1048292029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22909,6 +22916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: 90
   velocidad: 2
+  botonVR: {fileID: 0}
 --- !u!65 &1054656726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25850,6 +25858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueTrigger
   dialogueData: {fileID: 11400000, guid: b027a7c4906585d43b83c8f2724495b1, type: 2}
+  npcAnimator: {fileID: 1731456560}
   autoTriggerRadius: 10
   interactionHint: {fileID: 0}
 --- !u!136 &1205727928
@@ -26815,7 +26824,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c7c71a3243674dc4fb9f1b703f9786e5, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 62e4374155f26474a9f24cf5d186d634, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1258895038
 Transform:
@@ -35700,6 +35709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: -90
   velocidad: 2
+  botonVR: {fileID: 0}
 --- !u!4 &1654810444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7954721187298275811, guid: 2872c2bc8345b8944a8743aca3ff75e6, type: 3}
@@ -36404,6 +36414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueTrigger
   dialogueData: {fileID: 11400000, guid: fb5043bb4a20f6c49b26454a8ccdaa9c, type: 2}
+  npcAnimator: {fileID: 0}
   autoTriggerRadius: 10
   interactionHint: {fileID: 0}
 --- !u!136 &1706103305
@@ -37140,6 +37151,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100098, guid: c173040c2eb30f94d931e8b69d4971aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1731456559}
+    - targetCorrespondingSourceObject: {fileID: 100098, guid: c173040c2eb30f94d931e8b69d4971aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1731456561}
   m_SourcePrefab: {fileID: 100100000, guid: c173040c2eb30f94d931e8b69d4971aa, type: 3}
 --- !u!4 &1731456557 stripped
 Transform:
@@ -37174,6 +37188,27 @@ CapsuleCollider:
   m_Height: 2.1
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0.05}
+--- !u!95 &1731456560 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: c173040c2eb30f94d931e8b69d4971aa, type: 3}
+  m_PrefabInstance: {fileID: 1731456556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1731456561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731456558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf85218fe942764da2269a894cb5a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCproximidad
+  player: {fileID: 756589171}
+  distanciaActivacion: 10
+  animator: {fileID: 1731456560}
+  triggerNombre: Waving
 --- !u!4 &1732051422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 662617759783755039, guid: b5a60a83b72e6e64ab97a788bf59f1da, type: 3}
@@ -42183,6 +42218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuertaInteractiva
   anguloApertura: -90
   velocidad: 2
+  botonVR: {fileID: 0}
 --- !u!65 &1986755827
 BoxCollider:
   m_ObjectHideFlags: 0

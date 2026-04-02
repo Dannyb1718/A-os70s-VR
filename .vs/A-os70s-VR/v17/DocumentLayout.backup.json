@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GITHUB\\A-os70s-VR\\",
+  "WorkspaceRootPath": "D:\\GitHub\\A-os70s-VR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\abrirpuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\abrirpuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\npcproximidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npcproximidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\escobabarrido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\escobabarrido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GITHUB\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GITHUB\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialogueui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialogueui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\npcdialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\npcdialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EscobaBarrido.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\EscobaBarrido.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EscobaBarrido.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\EscobaBarrido.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EscobaBarrido.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "NPCproximidad.cs",
+              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\NPCproximidad.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPCproximidad.cs",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\NPCproximidad.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPCproximidad.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAA4wFEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T02:23:51.205Z",
+              "WhenOpened": "2026-04-01T23:09:51.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AbrirPuerta.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\AbrirPuerta.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AbrirPuerta.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Scripts\\AbrirPuerta.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AbrirPuerta.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DialogueData.cs",
+              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
+              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
+              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAwEAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T22:24:13.882Z",
+              "WhenOpened": "2026-04-01T22:48:42.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DialogueManager.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAJAAAAAAAAAA==",
+              "Title": "NPCDialogueTrigger.cs",
+              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
+              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwC4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T21:38:40.971Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DialogueUI.cs",
-              "DocumentMoniker": "D:\\GITHUB\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueUI.cs",
-              "ToolTip": "D:\\GITHUB\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueUI.cs",
-              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueUI.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAABQwIMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T17:51:22.303Z"
+              "WhenOpened": "2026-04-01T22:43:13.009Z"
             }
           ]
         }

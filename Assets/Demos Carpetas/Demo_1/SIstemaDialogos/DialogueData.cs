@@ -12,16 +12,18 @@ using UnityEngine;
 ///  3. CHOICES        →  Al terminar las Opening Lines aparecen estos botones.
 ///                        Pon siempre 2. Cada uno tiene:
 ///
-///      • Choice Text     → texto del botón (lo que "dice" el jugador)
-///      • Is Exit Choice  → si ON, cierra el diálogo sin más respuesta
-///      • Response Lines  → lo que responde el NPC si eligen esta opción
-///                          (solo si Is Exit Choice está OFF)
+///      • Choice Text       → texto del botón (lo que "dice" el jugador)
+///      • Is Exit Choice    → si ON, cierra el diálogo sin más respuesta
+///      • Response Lines    → lo que responde el NPC si eligen esta opción
+///      • Animation Trigger → 🔥 nombre del trigger que se activará en el Animator
 ///
 ///  EJEMPLO RÁPIDO:
 ///      Opening Lines:  "Hola viajero." / "¿En qué puedo ayudarte?"
 ///      Choice 0 → Text: "¿Qué sabes del bosque?"   IsExit: OFF
+///                  Trigger: "Talk"
 ///                  Response: "Dicen que está maldito..." / "Ten cuidado."
 ///      Choice 1 → Text: "Nada, adiós."              IsExit: ON
+///                  Trigger: "Bye"
 ///
 ///  Si no añades choices, el diálogo cierra al terminar las Opening Lines.
 /// ─────────────────────────────────────────────────────────────────────────────
@@ -35,6 +37,9 @@ public class DialogueChoice
     [Tooltip("ON  → esta opción cierra el diálogo directamente (sin respuesta del NPC).\n" +
              "OFF → el NPC responde con las Response Lines de abajo.")]
     public bool isExitChoice = false;
+
+    [Tooltip(" Nombre del Trigger en el Animator que se activará al elegir esta opción.")]
+    public string animationTrigger;
 
     [Tooltip("Líneas que dice el NPC después de elegir esta opción.\n" +
              "Se ignoran si Is Exit Choice está ON.")]

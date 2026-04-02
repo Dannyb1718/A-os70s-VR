@@ -20,6 +20,7 @@ MonoBehaviour:
   choices:
   - choiceText: "\xBFEst\xE1 bien?"
     isExitChoice: 0
+    animationTrigger: Drunk_Idle
     responseLines:
     - "\xBFYo? \xA1Perfectamente bien, mijo! Aqu\xED donde me ve, firme como un roble\u2026
       bueno, un roble que se mueve un poquito, pero firme."
@@ -29,6 +30,7 @@ MonoBehaviour:
     - "No se preocupe por m\xED, que yo s\xE9 llegar a mi casa\u2026 creo."
   - choiceText: "\xBFHa visto la procesi\xF3n?"
     isExitChoice: 0
+    animationTrigger: 
     responseLines:
     - "\xA1Claro, mijo! Eso ya lo tienen todo preparado, aunque todav\xEDa no ha
       salido. La gente anda arreglando las calles y dejando todo bonito pa\u2019
