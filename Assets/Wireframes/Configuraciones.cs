@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 public class Configuraciones : MonoBehaviour
 {
+    [Header("--- UI ---")]
     public Toggle baja;
     public Toggle media;
     public Toggle alta;
@@ -10,7 +12,10 @@ public class Configuraciones : MonoBehaviour
     public Slider musica;
     public Slider efectos;
 
-    int calidad = 1; // 0 baja, 1 media, 2 alta
+    [Header("--- Managers ---")]
+    public UIManager uiManager;
+
+    int calidad = 1;
 
     void Start()
     {
@@ -22,20 +27,20 @@ public class Configuraciones : MonoBehaviour
         calidad = value;
     }
 
-    public UIManager uiManager;
-
     public void Guardar()
     {
         PlayerPrefs.SetInt("Calidad", calidad);
         PlayerPrefs.SetFloat("Musica", musica.value);
         PlayerPrefs.SetFloat("Efectos", efectos.value);
-
         PlayerPrefs.Save();
 
         AplicarConfiguracion();
 
-        // Volver al menú con animación
-        uiManager.IrMenu();
+        // Volver al menú según el modo activo
+        if (XRSettings.isDeviceActive)
+            uiManager.IrMenu_VR();
+        else
+            uiManager.IrMenu();
     }
 
     public void Restablecer()
@@ -68,8 +73,6 @@ public class Configuraciones : MonoBehaviour
     void AplicarConfiguracion()
     {
         QualitySettings.SetQualityLevel(calidad);
-
         AudioListener.volume = musica.value;
-        // efectos puedes manejarlo con AudioMixer luego (pro)
     }
 }
