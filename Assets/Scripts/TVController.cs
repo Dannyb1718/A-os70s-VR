@@ -1,20 +1,30 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.Video;
 
 public class TVController : MonoBehaviour
 {
     public VideoPlayer videoPlayer;  // El VideoPlayer ya existente
-    public AudioSource audioSource;  // El AudioSource que reproducirá el sonido
-    public AudioClip clickSound;     // El sonido que se reproducirá al hacer clic
+    public AudioClip clickSound;     // Sonido del clic
+
+    public VideoClip[] videos;       // Lista de videos
+    private int indiceActual = 0;
+
     bool tvEncendida;
 
     void Start()
     {
         Debug.Log("TVController activo");
 
-        // Asegurarse de que el VideoPlayer y el AudioSource no estén reproduciendo al inicio
         videoPlayer.Stop();
-        audioSource.Stop();
+    }
+
+    void Update()
+    {
+        // Clic derecho â†’ cambiar video SOLO si estÃ¡ encendida
+        if (tvEncendida && Input.GetMouseButtonDown(1))
+        {
+            CambiarVideo();
+        }
     }
 
     public void ToggleTV()
@@ -25,20 +35,28 @@ public class TVController : MonoBehaviour
         {
             Debug.Log("TV ENCENDIDA");
 
-            // Reproducir el sonido del clic **solo cuando se enciende la TV**
-            audioSource.PlayOneShot(clickSound); // Reproducir solo el clic
+            // Sonido de clic
+            AudioSource.PlayClipAtPoint(clickSound, Camera.main.transform.position);
 
-            // Vincular el AudioSource al VideoPlayer para que reproduzca el audio
+            videoPlayer.clip = videos[indiceActual];
             videoPlayer.Play();
-            audioSource.Play();  // Reproducir el sonido del video
         }
         else
         {
             Debug.Log("TV APAGADA");
 
-            // Detener el video y el sonido
             videoPlayer.Stop();
-            audioSource.Stop();  // Detener el sonido del video
         }
+    }
+
+    void CambiarVideo()
+    {
+        indiceActual++;
+
+        if (indiceActual >= videos.Length)
+            indiceActual = 0;
+
+        videoPlayer.clip = videos[indiceActual];
+        videoPlayer.Play();
     }
 }

@@ -46017,11 +46017,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939995435}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4b902b9db74ab8a4abfa6b9dac884355, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -46031,8 +46031,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 1.967102
+  MinDistance: 0.01
+  MaxDistance: 1
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -46120,8 +46120,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TVController
   videoPlayer: {fileID: 1939995439}
-  audioSource: {fileID: 1939995436}
-  clickSound: {fileID: 8300000, guid: 4b902b9db74ab8a4abfa6b9dac884355, type: 3}
+  clickSound: {fileID: 8300000, guid: 3b74f39547ad1fc4ea81bf7562dcfe05, type: 3}
+  videos:
+  - {fileID: 32900000, guid: 698d1168edb65444faeccd58c98552c9, type: 3}
+  - {fileID: 32900000, guid: 6271994bfd8922d43a93507835c66e7e, type: 3}
+  - {fileID: 32900000, guid: 077d6723038211444b609c50152a1e34, type: 3}
+  - {fileID: 32900000, guid: ca3dc3f10335caf46adaf302cdfd5dc6, type: 3}
 --- !u!114 &1939995438
 MonoBehaviour:
   m_ObjectHideFlags: 0
