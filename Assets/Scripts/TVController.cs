@@ -9,6 +9,8 @@ public class TVController : MonoBehaviour
     public VideoClip[] videos;       // Lista de videos
     private int indiceActual = 0;
 
+    public AudioSource audio3D;      // 🔥 AudioSource 3D
+
     bool tvEncendida;
 
     void Start()
@@ -16,6 +18,14 @@ public class TVController : MonoBehaviour
         Debug.Log("TVController activo");
 
         videoPlayer.Stop();
+
+        // 🔥 Vincular audio del video al AudioSource 3D
+        if (audio3D != null)
+        {
+            videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+            videoPlayer.EnableAudioTrack(0, true);
+            videoPlayer.SetTargetAudioSource(0, audio3D);
+        }
     }
 
     void Update()

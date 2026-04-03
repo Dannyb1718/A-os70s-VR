@@ -25652,6 +25652,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2592568068821681909, guid: 9e631c2292b3e024fa55379e8fee9e57, type: 3}
       insertIndex: -1
       addedObject: {fileID: 968080118}
+    - targetCorrespondingSourceObject: {fileID: 2592568068821681909, guid: 9e631c2292b3e024fa55379e8fee9e57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 968080121}
   m_SourcePrefab: {fileID: 100100000, guid: 9e631c2292b3e024fa55379e8fee9e57, type: 3}
 --- !u!4 &968080116 stripped
 Transform:
@@ -25678,6 +25681,9 @@ MonoBehaviour:
   musicaSource: {fileID: 968080119}
   sfxSource: {fileID: 0}
   clickSound: {fileID: 8300000, guid: 866a3ffa94a964d43818d8e7a24636da, type: 3}
+  canciones:
+  - {fileID: 8300000, guid: b52e593afa26f494fbb52250a6ba152e, type: 3}
+  - {fileID: 8300000, guid: 03df08a1d18adc14e99533142ba0f0a4, type: 3}
 --- !u!82 &968080119
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25796,6 +25802,80 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 219.22427, y: 129.10114, z: 76.84963}
   m_Center: {x: -0.0000038146973, y: 65.34382, z: -0.0000038146973}
+--- !u!114 &968080121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968080117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
 --- !u!1001 &974009989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46031,8 +46111,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.01
-  MaxDistance: 1
+  MinDistance: 0.990099
+  MaxDistance: 1.5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -46126,6 +46206,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 6271994bfd8922d43a93507835c66e7e, type: 3}
   - {fileID: 32900000, guid: 077d6723038211444b609c50152a1e34, type: 3}
   - {fileID: 32900000, guid: ca3dc3f10335caf46adaf302cdfd5dc6, type: 3}
+  audio3D: {fileID: 1939995436}
 --- !u!114 &1939995438
 MonoBehaviour:
   m_ObjectHideFlags: 0
