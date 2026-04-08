@@ -1,30 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHub\\A-os70s-VR\\",
+  "WorkspaceRootPath": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\tvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|c:\\users\\braul\\desktop\\a-os70s-vr\\assets\\scripts\\collectibleitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectibleitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\npcproximidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npcproximidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\scripts\\interactionconstraints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactionconstraints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\npcdialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\npcdialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\demos carpetas\\demo_1\\sistemadialogos\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|C:\\Users\\braul\\Desktop\\A-os70s-VR\\assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,76 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TVController.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\TVController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TVController.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\TVController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TVController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAwD0AAAABAAAAAAAAAA==",
+              "Title": "CollectibleItem.cs",
+              "DocumentMoniker": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\CollectibleItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CollectibleItem.cs",
+              "ToolTip": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\CollectibleItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CollectibleItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T15:16:12.554Z",
+              "WhenOpened": "2026-04-08T20:46:53.79Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InteractionConstraints.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\InteractionConstraints.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\InteractionConstraints.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\InteractionConstraints.cs",
-              "RelativeToolTip": "Assets\\Scripts\\InteractionConstraints.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwDUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T20:48:59.89Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DialogueManager.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueManager.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAA4wGAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T01:26:54.149Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NPCproximidad.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\NPCproximidad.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NPCproximidad.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\NPCproximidad.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NPCproximidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventoryManager.cs",
+              "ToolTip": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\InventoryManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventoryManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T23:09:51.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DialogueData.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
-              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
-              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\DialogueData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T22:48:42.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NPCDialogueTrigger.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
-              "RelativeToolTip": "Assets\\Demos Carpetas\\Demo_1\\SIstemaDialogos\\NPCDialogueTrigger.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwBAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T22:43:13.009Z"
+              "WhenOpened": "2026-04-08T20:46:15.485Z"
             }
           ]
         }
