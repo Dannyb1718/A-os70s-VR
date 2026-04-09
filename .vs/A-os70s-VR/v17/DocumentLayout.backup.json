@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|c:\\users\\braul\\desktop\\a-os70s-vr\\assets\\scripts\\collectibleitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|c:\\users\\braul\\desktop\\a-os70s-vr\\assets\\scripts\\tipsdisplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tipsdisplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|c:\\users\\braul\\desktop\\a-os70s-vr\\assets\\controladores\\playermodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\controladores\\playermodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|C:\\Users\\braul\\Desktop\\A-os70s-VR\\assets\\scripts\\inventoryhudview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventoryhudview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|C:\\Users\\braul\\Desktop\\A-os70s-VR\\assets\\scripts\\collectibleitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectibleitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,6 +35,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TipsDisplayManager.cs",
+              "DocumentMoniker": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\TipsDisplayManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TipsDisplayManager.cs",
+              "ToolTip": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\TipsDisplayManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TipsDisplayManager.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAowDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T19:26:43.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerModeManager.cs",
+              "DocumentMoniker": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Controladores\\PlayerModeManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Controladores\\PlayerModeManager.cs",
+              "ToolTip": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Controladores\\PlayerModeManager.cs",
+              "RelativeToolTip": "Assets\\Controladores\\PlayerModeManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T19:23:02.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InventoryHUDView.cs",
+              "DocumentMoniker": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\InventoryHUDView.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventoryHUDView.cs",
+              "ToolTip": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\InventoryHUDView.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventoryHUDView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T20:47:52.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CollectibleItem.cs",
               "DocumentMoniker": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\CollectibleItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CollectibleItem.cs",
@@ -30,12 +80,11 @@
               "RelativeToolTip": "Assets\\Scripts\\CollectibleItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T20:46:53.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-08T20:46:53.79Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "InventoryManager.cs",
               "DocumentMoniker": "C:\\Users\\braul\\Desktop\\A-os70s-VR\\Assets\\Scripts\\InventoryManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InventoryManager.cs",

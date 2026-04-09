@@ -26,4 +26,8 @@ public class PlayerModeManager : MonoBehaviour
             desktopPlayer.SetActive(true);
         }
     }
+
+    // Agrega esto en PlayerModeManager.cs
+    public bool IsVRMode => xrRig != null && xrRig.gameObject.activeSelf;
 }
+
