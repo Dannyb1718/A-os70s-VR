@@ -17809,6 +17809,7 @@ GameObject:
   - component: {fileID: 585075696}
   - component: {fileID: 585075695}
   - component: {fileID: 585075699}
+  - component: {fileID: 585075700}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -17943,7 +17944,26 @@ MonoBehaviour:
   interactionDuration: 6
   targetFOV: 45
   zoomSpeed: 5
-  vrLookSpeed: 2
+  moveSpeed: 1.5
+  stopDistance: 1.5
+  rotationSpeed: 3
+--- !u!114 &585075700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585075693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.CoreUtils::Unity.XR.CoreUtils.XROrigin
+  m_Camera: {fileID: 0}
+  m_OriginBaseGameObject: {fileID: 1471995383}
+  m_CameraFloorOffsetObject: {fileID: 159088878}
+  m_RequestedTrackingOriginMode: 0
+  m_CameraYOffset: 1.1176
 --- !u!1 &586309189
 GameObject:
   m_ObjectHideFlags: 0
