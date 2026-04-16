@@ -1,43 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using UnityEngine.XR;
+using TMPro;
 
 [System.Serializable]
 public class AnimationStep
 {
-    public string stateName;   // nombre del estado en el Animator
+    public string stateName;
     public float duration;
 }
 
 public class NPCInteraction : MonoBehaviour
 {
+    [Header("NPC")]
     public Animator npcAnimator;
+
+    [Header("Secuencia de Animaciones (CONTROL REAL)")]
     public List<AnimationStep> animationSequence = new List<AnimationStep>();
 
+    [Header("HUD")]
+    public TextMeshProUGUI itemMessageText;
+    public float messageDuration = 2.5f;
+
     private bool isInteracting = false;
-    private Vector3 originalPosition;
+    private bool yaInteractuo = false;
+    private bool tieneItem = false;
 
     void Start()
     {
-        if (npcAnimator != null)
-        {
-            npcAnimator.applyRootMotion = false; // 🔥 evita movimiento raro del NPC
-        }
-
-        originalPosition = transform.position;
-    }
-
-    void LateUpdate()
-    {
-        // BLOQUEA NPC EN Y (no se hunda ni flote)
-        transform.position = new Vector3(transform.position.x, originalPosition.y, transform.position.z);
+        if (itemMessageText != null)
+            itemMessageText.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isInteracting)
+        if (isInteracting || yaInteractuo) return;
+
+        if (other.CompareTag("Player"))
         {
             StartCoroutine(InteractionSequence(other.gameObject));
         }
@@ -49,18 +49,13 @@ public class NPCInteraction : MonoBehaviour
 
         var controller = player.GetComponent<FirstPersonController>();
         var rb = player.GetComponent<Rigidbody>();
-        var moveProvider = player.GetComponent<DynamicMoveProvider>();
 
-        // =========================
-        // BLOQUEO TOTAL PLAYER
-        // =========================
+        // 🔥 CONGELAR TODO (COMO TU CÓDIGO ORIGINAL)
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             rb.useGravity = false;
-
-            // 💥 congela TODO (XYZ + rotaciones)
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }
 
@@ -69,20 +64,12 @@ public class NPCInteraction : MonoBehaviour
             controller.playerCanMove = false;
             controller.cameraCanMove = false;
             controller.enableHeadBob = false;
-
-            // 💥 desactiva completamente el controlador
-            controller.enabled = false;
-        }
-
-        if (moveProvider != null)
-        {
-            moveProvider.enabled = false;
         }
 
         yield return null;
 
         // =========================
-        //  SECUENCIA DE ANIMACIONES
+        // 🎭 SECUENCIA REAL (LA BUENA)
         // =========================
         foreach (AnimationStep step in animationSequence)
         {
@@ -90,37 +77,58 @@ public class NPCInteraction : MonoBehaviour
             {
                 Debug.Log("Reproduciendo: " + step.stateName);
 
+                // 🔥 ESTO ES LO QUE HACE QUE FUNCIONE
                 npcAnimator.Play(step.stateName, 0, 0f);
             }
 
             yield return new WaitForSeconds(step.duration);
         }
 
-        // =========================
-        //  RESTAURAR PLAYER
-        // =========================
-        if (rb != null)
+        // 🎁 ITEM
+        if (!tieneItem)
         {
-            rb.useGravity = true;
+            tieneItem = true;
+            Debug.Log("ITEM OBTENIDO ✅");
 
-            //  quitar congelamiento
-            rb.constraints = RigidbodyConstraints.None;
+            if (itemMessageText != null)
+                StartCoroutine(MostrarMensajeHUD("🎁 Nuevo ítem obtenido"));
         }
 
+        // 🔥 RESTAURAR SIN DESLIZAMIENTO
         if (controller != null)
         {
-            controller.enabled = true;
-
             controller.playerCanMove = true;
-            controller.cameraCanMove = true;
             controller.enableHeadBob = true;
         }
 
-        if (moveProvider != null)
+        yield return null; // 🔥 limpia input (CLAVE)
+
+        if (controller != null)
         {
-            moveProvider.enabled = true;
+            controller.cameraCanMove = true;
         }
 
+        if (rb != null)
+        {
+            rb.useGravity = true;
+            rb.constraints = RigidbodyConstraints.None;
+        }
+
+        yaInteractuo = true;
+
+        // 🔒 opcional: desactivar trigger
+        GetComponent<Collider>().enabled = false;
+
         isInteracting = false;
+    }
+
+    IEnumerator MostrarMensajeHUD(string mensaje)
+    {
+        itemMessageText.text = mensaje;
+        itemMessageText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(messageDuration);
+
+        itemMessageText.gameObject.SetActive(false);
     }
 }

@@ -17942,7 +17942,9 @@ MonoBehaviour:
   npcAnimator: {fileID: 208912076}
   animationSequence:
   - stateName: Holding Idle (1)
-    duration: 15
+    duration: 12
+  itemMessageText: {fileID: 0}
+  messageDuration: 2.5
 --- !u!1 &586309189
 GameObject:
   m_ObjectHideFlags: 0
