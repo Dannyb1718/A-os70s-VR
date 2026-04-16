@@ -1,160 +1,182 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using Unity.XR.CoreUtils;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+
+[System.Serializable]
+public class AnimationStep
+{
+    public string stateName;
+    public float duration;
+}
 
 public class NPCInteraction : MonoBehaviour
 {
+    [Header("Animación NPC")]
     public Animator npcAnimator;
-    public float interactionDuration = 3f;
+    public List<AnimationStep> animationSequence = new List<AnimationStep>();
 
-    [Header("PC Zoom")]
-    public float targetFOV = 45f;
-    public float zoomSpeed = 5f;
+    [Header("Punto de interacción (Empty opcional)")]
+    public Transform interactionPoint;
 
-    [Header("VR Movimiento")]
-    public float moveSpeed = 1.5f;
-    public float stopDistance = 1.5f;
-    public float rotationSpeed = 3f;
+    [Header("Recompensa")]
+    public GameObject itemDinero;
+    public GameObject itemCarta;
 
     private bool isInteracting = false;
-    private bool alreadyInteracted = false;
+
+    // Referencias jugador
+    private FirstPersonController playerController;
+    private DynamicMoveProvider moveProvider;
+    private Rigidbody playerRigidbody;
+
+    // Estado original
+    private bool originalPlayerCanMove;
+    private bool originalCameraCanMove;
+    private bool originalHeadBob;
+    private bool moveProviderWasEnabled;
+    private Vector3 originalVelocity;
+    private Vector3 originalAngularVelocity;
+
+    void Start()
+    {
+        if (npcAnimator != null)
+            npcAnimator.applyRootMotion = false;
+
+        if (itemDinero != null) itemDinero.SetActive(false);
+        if (itemCarta != null) itemCarta.SetActive(false);
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isInteracting && !alreadyInteracted)
+        if (other.CompareTag("Player") && !isInteracting)
         {
+            InitializePlayer(other.gameObject);
             StartCoroutine(InteractionSequence(other.gameObject));
+        }
+    }
+
+    void InitializePlayer(GameObject player)
+    {
+        playerController = player.GetComponent<FirstPersonController>();
+        moveProvider = player.GetComponent<DynamicMoveProvider>();
+        playerRigidbody = player.GetComponent<Rigidbody>();
+
+        SaveState();
+    }
+
+    void SaveState()
+    {
+        if (playerController != null)
+        {
+            originalPlayerCanMove = playerController.playerCanMove;
+            originalCameraCanMove = playerController.cameraCanMove;
+            originalHeadBob = playerController.enableHeadBob;
+        }
+
+        if (moveProvider != null)
+            moveProviderWasEnabled = moveProvider.enabled;
+
+        if (playerRigidbody != null)
+        {
+            originalVelocity = playerRigidbody.linearVelocity;
+            originalAngularVelocity = playerRigidbody.angularVelocity;
         }
     }
 
     IEnumerator InteractionSequence(GameObject player)
     {
         isInteracting = true;
-        alreadyInteracted = true;
 
-        var controller = player.GetComponent<FirstPersonController>();
-        var rb = player.GetComponent<Rigidbody>();
-        var xrOrigin = player.GetComponent<XROrigin>();
-        var moveProvider = player.GetComponent<ActionBasedContinuousMoveProvider>();
-        var turnProvider = player.GetComponent<ActionBasedContinuousTurnProvider>();
+        // 🔒 BLOQUEAR
+        LockPlayer();
 
-        bool isVR = XRSettings.enabled && xrOrigin != null;
-
-        Camera cam = null;
-        Transform originTransform = null;
-
-        if (isVR)
+        // 🎯 MIRAR AL EMPTY
+        if (interactionPoint != null)
         {
-            cam = xrOrigin.Camera;
-            originTransform = xrOrigin.Origin.transform;
-        }
-        else if (controller != null)
-        {
-            cam = controller.playerCamera;
+            Vector3 dir = interactionPoint.position - player.transform.position;
+            dir.y = 0;
+
+            if (dir != Vector3.zero)
+                player.transform.rotation = Quaternion.LookRotation(dir);
         }
 
-        // 🔥 BLOQUEO TOTAL REAL
-        if (rb != null)
+        // 🎭 ANIMACIONES
+        if (npcAnimator != null)
         {
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.isKinematic = true;
-        }
-
-        if (controller != null)
-        {
-            controller.playerCanMove = false;
-            controller.cameraCanMove = false;
-            controller.enableHeadBob = false;
-        }
-
-        if (moveProvider != null) moveProvider.enabled = false;
-        if (turnProvider != null) turnProvider.enabled = false;
-
-        // 🎭 ANIMACIÓN
-        npcAnimator.SetTrigger("Interaccion");
-
-        float timer = 0f;
-
-        while (timer < interactionDuration)
-        {
-            timer += Time.deltaTime;
-
-            if (!isVR)
+            foreach (AnimationStep step in animationSequence)
             {
-                // 💻 PC → ZOOM
-                if (cam != null)
+                if (!string.IsNullOrEmpty(step.stateName))
                 {
-                    cam.fieldOfView = Mathf.Lerp(
-                        cam.fieldOfView,
-                        targetFOV,
-                        Time.deltaTime * zoomSpeed
-                    );
+                    npcAnimator.Play(step.stateName, 0, 0f);
+                    yield return new WaitForSeconds(step.duration);
                 }
             }
-            else
-            {
-                // 🥽 VR → ROTAR + ACERCAR
-                Vector3 direction = transform.position - originTransform.position;
-                direction.y = 0;
-
-                Quaternion targetRot = Quaternion.LookRotation(direction);
-
-                originTransform.rotation = Quaternion.Slerp(
-                    originTransform.rotation,
-                    targetRot,
-                    Time.deltaTime * rotationSpeed
-                );
-
-                float distance = direction.magnitude;
-
-                if (distance > stopDistance)
-                {
-                    originTransform.position += direction.normalized * moveSpeed * Time.deltaTime;
-                }
-            }
-
-            yield return null;
         }
 
-        // 🔄 RESTAURAR ZOOM (PC)
-        if (!isVR && cam != null && controller != null)
-        {
-            StartCoroutine(RestoreFOV(cam, controller.fov));
-        }
+        // 🎁 RECOMPENSAS
+        if (itemDinero != null)
+            itemDinero.SetActive(true);
 
-        // 🔓 RESTAURAR TODO
-        if (controller != null)
-        {
-            controller.playerCanMove = true;
-            controller.cameraCanMove = true;
-            controller.enableHeadBob = true;
-        }
+        if (itemCarta != null)
+            itemCarta.SetActive(true);
 
-        if (moveProvider != null) moveProvider.enabled = true;
-        if (turnProvider != null) turnProvider.enabled = true;
+        // 🟢 MENSAJE EN CONSOLA
+        Debug.Log("🎉 Conseguite estos items: Dinero y Carta");
 
-        if (rb != null)
-        {
-            rb.isKinematic = false;
-        }
+        // 🔓 DESBLOQUEAR
+        RestorePlayer();
 
         isInteracting = false;
     }
 
-    IEnumerator RestoreFOV(Camera cam, float normalFOV)
+    void LockPlayer()
     {
-        while (Mathf.Abs(cam.fieldOfView - normalFOV) > 0.1f)
+        if (playerController != null)
         {
-            cam.fieldOfView = Mathf.Lerp(
-                cam.fieldOfView,
-                normalFOV,
-                Time.deltaTime * zoomSpeed
-            );
+            // ❌ NO bloquear la cámara
+            // playerController.cameraCanMove = false;
 
-            yield return null;
+            // ✅ Solo bloquear movimiento
+            playerController.playerCanMove = false;
+
+            // Opcional: quitar headbob si quieres
+            playerController.enableHeadBob = false;
+        }
+
+        // ✅ Esto es lo importante en VR: desactiva locomotion
+        if (moveProvider != null)
+            moveProvider.enabled = false;
+
+        // Opcional: parar física
+        if (playerRigidbody != null)
+        {
+            playerRigidbody.linearVelocity = Vector3.zero;
+            playerRigidbody.angularVelocity = Vector3.zero;
+        }
+    }
+
+    void RestorePlayer()
+    {
+        if (playerController != null)
+        {
+            playerController.playerCanMove = originalPlayerCanMove;
+
+            // ❌ NO tocar la cámara
+            // playerController.cameraCanMove = originalCameraCanMove;
+
+            playerController.enableHeadBob = originalHeadBob;
+        }
+
+        if (moveProvider != null)
+            moveProvider.enabled = moveProviderWasEnabled;
+
+        if (playerRigidbody != null)
+        {
+            playerRigidbody.linearVelocity = originalVelocity;
+            playerRigidbody.angularVelocity = originalAngularVelocity;
         }
     }
 }

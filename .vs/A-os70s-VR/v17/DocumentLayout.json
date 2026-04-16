@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "D:\\GitHub\\A-os70s-VR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\npcinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\scripts\\npcinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npcinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\A-os70s-VR\\Library\\PackageCache\\com.unity.xr.core-utils@f0450cbac8d6\\Runtime\\XROrigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.xr.core-utils@f0450cbac8d6\\Runtime\\XROrigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\A-os70s-VR\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Inputs\\InputActionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Inputs\\InputActionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\controladores\\playermodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\controladores\\playermodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|d:\\github\\a-os70s-vr\\assets\\scripts\\srtienda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\srtienda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\scripts\\inventoryhudview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventoryhudview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\AchievementUnlocker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\AchievementUnlocker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\scripts\\collectibleitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectibleitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|D:\\GitHub\\A-os70s-VR\\assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C95765B-C1D4-5143-CB01-7F2498044DE6}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,19 +30,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "XROrigin.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Library\\PackageCache\\com.unity.xr.core-utils@f0450cbac8d6\\Runtime\\XROrigin.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.core-utils@f0450cbac8d6\\Runtime\\XROrigin.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Library\\PackageCache\\com.unity.xr.core-utils@f0450cbac8d6\\Runtime\\XROrigin.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.xr.core-utils@f0450cbac8d6\\Runtime\\XROrigin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMECAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "SRtienda.cs",
+              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\SRtienda.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SRtienda.cs",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\SRtienda.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SRtienda.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAA7wH4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T23:03:22.609Z",
+              "WhenOpened": "2026-04-16T06:35:27.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AchievementUnlocker.cs",
+              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\AchievementUnlocker.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AchievementUnlocker.cs",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\AchievementUnlocker.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AchievementUnlocker.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T03:12:01.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InputActionManager.cs",
+              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Inputs\\InputActionManager.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Inputs\\InputActionManager.cs",
+              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Inputs\\InputActionManager.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Inputs\\InputActionManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T00:21:33.371Z",
               "EditorCaption": ""
             },
             {
@@ -57,34 +77,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPCInteraction.cs",
               "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\NPCInteraction.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPCInteraction.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAAwJ8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAgwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-15T22:33:53.459Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerModeManager.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Controladores\\PlayerModeManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Controladores\\PlayerModeManager.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Controladores\\PlayerModeManager.cs",
-              "RelativeToolTip": "Assets\\Controladores\\PlayerModeManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T19:23:02.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InventoryHUDView.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\InventoryHUDView.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\InventoryHUDView.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\InventoryHUDView.cs",
-              "RelativeToolTip": "Assets\\Scripts\\InventoryHUDView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T20:47:52.759Z"
             },
             {
               "$type": "Document",
@@ -97,18 +93,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T20:46:53.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InventoryManager.cs",
-              "DocumentMoniker": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\InventoryManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\InventoryManager.cs",
-              "ToolTip": "D:\\GitHub\\A-os70s-VR\\Assets\\Scripts\\InventoryManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\InventoryManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T20:46:15.485Z"
             }
           ]
         }
