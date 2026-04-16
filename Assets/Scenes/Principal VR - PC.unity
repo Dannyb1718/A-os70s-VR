@@ -4330,19 +4330,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -118.293465
+      value: -117.123085
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.20095
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -72.76403
+      value: -72.42579
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.018068071
+      value: 0.9911916
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4350,7 +4350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99983674
+      value: 0.13243595
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4362,7 +4362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 182.071
+      value: 15.221
       objectReference: {fileID: 0}
     - target: {fileID: 4000012166619398, guid: 13077051e79ce364b8a5e15eeda4387e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -17809,7 +17809,6 @@ GameObject:
   - component: {fileID: 585075696}
   - component: {fileID: 585075695}
   - component: {fileID: 585075699}
-  - component: {fileID: 585075700}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -17826,7 +17825,7 @@ Transform:
   m_GameObject: {fileID: 585075693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9032235, y: 0.88554615, z: -0.14283308}
+  m_LocalPosition: {x: -0.26922187, y: 0.88554615, z: -0.14283015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17845,7 +17844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueTrigger
   dialogueData: {fileID: 0}
-  npcAnimator: {fileID: 0}
+  npcAnimator: {fileID: 208912076}
   autoTriggerRadius: 10
   interactionHint: {fileID: 0}
 --- !u!136 &585075696
@@ -17941,29 +17940,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
   npcAnimator: {fileID: 208912076}
-  interactionDuration: 6
-  targetFOV: 45
-  zoomSpeed: 5
-  moveSpeed: 1.5
-  stopDistance: 1.5
-  rotationSpeed: 3
---- !u!114 &585075700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585075693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.CoreUtils::Unity.XR.CoreUtils.XROrigin
-  m_Camera: {fileID: 0}
-  m_OriginBaseGameObject: {fileID: 1471995383}
-  m_CameraFloorOffsetObject: {fileID: 159088878}
-  m_RequestedTrackingOriginMode: 0
-  m_CameraYOffset: 1.1176
+  animationSequence:
+  - stateName: Holding Idle (1)
+    duration: 15
 --- !u!1 &586309189
 GameObject:
   m_ObjectHideFlags: 0
