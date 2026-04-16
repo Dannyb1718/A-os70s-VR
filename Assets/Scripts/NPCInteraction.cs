@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using TMPro;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 [System.Serializable]
 public class AnimationStep
@@ -13,33 +14,75 @@ public class AnimationStep
 
 public class NPCInteraction : MonoBehaviour
 {
-    [Header("NPC")]
+    [Header("Animación NPC")]
     public Animator npcAnimator;
-
-    [Header("Secuencia de Animaciones (CONTROL REAL)")]
     public List<AnimationStep> animationSequence = new List<AnimationStep>();
 
-    [Header("HUD")]
-    public TextMeshProUGUI itemMessageText;
-    public float messageDuration = 2.5f;
+    [Header("Punto de interacción (Empty opcional)")]
+    public Transform interactionPoint;
+
+    [Header("Recompensa")]
+    public GameObject itemDinero;
+    public GameObject itemCarta;
 
     private bool isInteracting = false;
-    private bool yaInteractuo = false;
-    private bool tieneItem = false;
+
+    // Referencias jugador
+    private FirstPersonController playerController;
+    private DynamicMoveProvider moveProvider;
+    private Rigidbody playerRigidbody;
+
+    // Estado original
+    private bool originalPlayerCanMove;
+    private bool originalCameraCanMove;
+    private bool originalHeadBob;
+    private bool moveProviderWasEnabled;
+    private Vector3 originalVelocity;
+    private Vector3 originalAngularVelocity;
 
     void Start()
     {
-        if (itemMessageText != null)
-            itemMessageText.gameObject.SetActive(false);
+        if (npcAnimator != null)
+            npcAnimator.applyRootMotion = false;
+
+        if (itemDinero != null) itemDinero.SetActive(false);
+        if (itemCarta != null) itemCarta.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (isInteracting || yaInteractuo) return;
-
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isInteracting)
         {
+            InitializePlayer(other.gameObject);
             StartCoroutine(InteractionSequence(other.gameObject));
+        }
+    }
+
+    void InitializePlayer(GameObject player)
+    {
+        playerController = player.GetComponent<FirstPersonController>();
+        moveProvider = player.GetComponent<DynamicMoveProvider>();
+        playerRigidbody = player.GetComponent<Rigidbody>();
+
+        SaveState();
+    }
+
+    void SaveState()
+    {
+        if (playerController != null)
+        {
+            originalPlayerCanMove = playerController.playerCanMove;
+            originalCameraCanMove = playerController.cameraCanMove;
+            originalHeadBob = playerController.enableHeadBob;
+        }
+
+        if (moveProvider != null)
+            moveProviderWasEnabled = moveProvider.enabled;
+
+        if (playerRigidbody != null)
+        {
+            originalVelocity = playerRigidbody.linearVelocity;
+            originalAngularVelocity = playerRigidbody.angularVelocity;
         }
     }
 
@@ -47,88 +90,83 @@ public class NPCInteraction : MonoBehaviour
     {
         isInteracting = true;
 
-        var controller = player.GetComponent<FirstPersonController>();
-        var rb = player.GetComponent<Rigidbody>();
+        // 🔒 BLOQUEAR
+        LockPlayer();
 
-        // 🔥 CONGELAR TODO (COMO TU CÓDIGO ORIGINAL)
-        if (rb != null)
+        // 🎯 MIRAR AL EMPTY
+        if (interactionPoint != null)
         {
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.useGravity = false;
-            rb.constraints = RigidbodyConstraints.FreezeAll;
+            Vector3 dir = interactionPoint.position - player.transform.position;
+            dir.y = 0;
+
+            if (dir != Vector3.zero)
+                player.transform.rotation = Quaternion.LookRotation(dir);
         }
 
-        if (controller != null)
+        // 🎭 ANIMACIONES
+        if (npcAnimator != null)
         {
-            controller.playerCanMove = false;
-            controller.cameraCanMove = false;
-            controller.enableHeadBob = false;
-        }
-
-        yield return null;
-
-        // =========================
-        // 🎭 SECUENCIA REAL (LA BUENA)
-        // =========================
-        foreach (AnimationStep step in animationSequence)
-        {
-            if (npcAnimator != null && !string.IsNullOrEmpty(step.stateName))
+            foreach (AnimationStep step in animationSequence)
             {
-                Debug.Log("Reproduciendo: " + step.stateName);
-
-                // 🔥 ESTO ES LO QUE HACE QUE FUNCIONE
-                npcAnimator.Play(step.stateName, 0, 0f);
+                if (!string.IsNullOrEmpty(step.stateName))
+                {
+                    npcAnimator.Play(step.stateName, 0, 0f);
+                    yield return new WaitForSeconds(step.duration);
+                }
             }
-
-            yield return new WaitForSeconds(step.duration);
         }
 
-        // 🎁 ITEM
-        if (!tieneItem)
-        {
-            tieneItem = true;
-            Debug.Log("ITEM OBTENIDO ✅");
+        // 🎁 RECOMPENSAS
+        if (itemDinero != null)
+            itemDinero.SetActive(true);
 
-            if (itemMessageText != null)
-                StartCoroutine(MostrarMensajeHUD("🎁 Nuevo ítem obtenido"));
-        }
+        if (itemCarta != null)
+            itemCarta.SetActive(true);
 
-        // 🔥 RESTAURAR SIN DESLIZAMIENTO
-        if (controller != null)
-        {
-            controller.playerCanMove = true;
-            controller.enableHeadBob = true;
-        }
+        // 🟢 MENSAJE EN CONSOLA
+        Debug.Log("🎉 Conseguite estos items: Dinero y Carta");
 
-        yield return null; // 🔥 limpia input (CLAVE)
-
-        if (controller != null)
-        {
-            controller.cameraCanMove = true;
-        }
-
-        if (rb != null)
-        {
-            rb.useGravity = true;
-            rb.constraints = RigidbodyConstraints.None;
-        }
-
-        yaInteractuo = true;
-
-        // 🔒 opcional: desactivar trigger
-        GetComponent<Collider>().enabled = false;
+        // 🔓 DESBLOQUEAR
+        RestorePlayer();
 
         isInteracting = false;
     }
 
-    IEnumerator MostrarMensajeHUD(string mensaje)
+    void LockPlayer()
     {
-        itemMessageText.text = mensaje;
-        itemMessageText.gameObject.SetActive(true);
+        if (playerController != null)
+        {
+            playerController.playerCanMove = false;
+            playerController.cameraCanMove = false;
+            playerController.enableHeadBob = false;
+        }
 
-        yield return new WaitForSeconds(messageDuration);
+        if (moveProvider != null)
+            moveProvider.enabled = false;
 
-        itemMessageText.gameObject.SetActive(false);
+        if (playerRigidbody != null)
+        {
+            playerRigidbody.linearVelocity = Vector3.zero;
+            playerRigidbody.angularVelocity = Vector3.zero;
+        }
+    }
+
+    void RestorePlayer()
+    {
+        if (playerController != null)
+        {
+            playerController.playerCanMove = originalPlayerCanMove;
+            playerController.cameraCanMove = originalCameraCanMove;
+            playerController.enableHeadBob = originalHeadBob;
+        }
+
+        if (moveProvider != null)
+            moveProvider.enabled = moveProviderWasEnabled;
+
+        if (playerRigidbody != null)
+        {
+            playerRigidbody.linearVelocity = originalVelocity;
+            playerRigidbody.angularVelocity = originalAngularVelocity;
+        }
     }
 }
