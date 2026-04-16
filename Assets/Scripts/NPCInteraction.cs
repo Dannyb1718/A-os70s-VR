@@ -136,14 +136,21 @@ public class NPCInteraction : MonoBehaviour
     {
         if (playerController != null)
         {
+            // ❌ NO bloquear la cámara
+            // playerController.cameraCanMove = false;
+
+            // ✅ Solo bloquear movimiento
             playerController.playerCanMove = false;
-            playerController.cameraCanMove = false;
+
+            // Opcional: quitar headbob si quieres
             playerController.enableHeadBob = false;
         }
 
+        // ✅ Esto es lo importante en VR: desactiva locomotion
         if (moveProvider != null)
             moveProvider.enabled = false;
 
+        // Opcional: parar física
         if (playerRigidbody != null)
         {
             playerRigidbody.linearVelocity = Vector3.zero;
@@ -156,7 +163,10 @@ public class NPCInteraction : MonoBehaviour
         if (playerController != null)
         {
             playerController.playerCanMove = originalPlayerCanMove;
-            playerController.cameraCanMove = originalCameraCanMove;
+
+            // ❌ NO tocar la cámara
+            // playerController.cameraCanMove = originalCameraCanMove;
+
             playerController.enableHeadBob = originalHeadBob;
         }
 
