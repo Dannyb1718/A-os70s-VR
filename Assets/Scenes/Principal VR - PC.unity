@@ -5979,57 +5979,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1162612131}
   m_SourcePrefab: {fileID: 100100000, guid: 6010d55e4e1921e43aea52e149045526, type: 3}
---- !u!1 &254943697
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 254943698}
-  - component: {fileID: 254943699}
-  m_Layer: 0
-  m_Name: VRInventoryCanvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &254943698
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254943697}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -37.437428, y: 2.15992, z: -94.02014}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1164782957}
-  m_Father: {fileID: 1182303346}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &254943699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254943697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59b0184de72b861438fdbadedcf8d813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VRInventory
-  vrInventoryCanvas: {fileID: 1164782956}
-  canvasGroup: {fileID: 1164782961}
-  xrCameraTransform: {fileID: 9014170783777442264}
-  canvasDistance: 1.5
-  visibleDuration: 15
-  fadeDuration: 1
 --- !u!4 &255810856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4861113679566431203, guid: a77640f6af0b71e4892dcb7d300b95b4, type: 3}
@@ -31488,6 +31437,64 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2740653782745285436, guid: e6cbddd2928148446b926e64183951d5, type: 3}
   m_PrefabInstance: {fileID: 1267352235}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1158957496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158957497}
+  - component: {fileID: 1158957498}
+  m_Layer: 0
+  m_Name: VRInventoryCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1158957497
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158957496}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -412.6006}
+  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1164782957}
+  m_Father: {fileID: 1182303346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -38.000217, y: 176.37502}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1158957498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158957496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865c42b8d52be0444a18443fb94d1853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryHUDView
+  slots:
+  - {fileID: 1552524586}
+  - {fileID: 1940213271}
+  - {fileID: 1142391303}
+  vrInventoryCanvas: {fileID: 1164782956}
+  xrCameraTransform: {fileID: 9014170783777442264}
+  canvasDistance: 1.5
+  visibleDuration: 5
+  fadeDuration: 1
 --- !u!4 &1159352597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7954721187298275811, guid: 2872c2bc8345b8944a8743aca3ff75e6, type: 3}
@@ -31684,16 +31691,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164782956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5626831}
-  m_LocalScale: {x: 0.004, y: 0.004, z: 0.004}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1403006761}
-  m_Father: {fileID: 254943698}
+  m_Father: {fileID: 1158957497}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 318.58014, y: 174.21509}
+  m_AnchoredPosition: {x: 49.96673, y: 50.001724}
   m_SizeDelta: {x: 637.2, y: 353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164782958
@@ -31893,6 +31900,11 @@ MonoBehaviour:
   - {fileID: 1364059215}
   - {fileID: 1424092200}
   - {fileID: 1444296489}
+  vrInventoryCanvas: {fileID: 0}
+  xrCameraTransform: {fileID: 0}
+  canvasDistance: 1.5
+  visibleDuration: 5
+  fadeDuration: 1
 --- !u!1001 &1167732576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37761,7 +37773,6 @@ GameObject:
   - component: {fileID: 1403006761}
   - component: {fileID: 1403006764}
   - component: {fileID: 1403006763}
-  - component: {fileID: 1403006762}
   m_Layer: 0
   m_Name: InventoryHUD
   m_TagString: Untagged
@@ -37777,7 +37788,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403006760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.030517578}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 241.20242, y: 241.20248, z: 241.20242}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37788,25 +37799,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 170883.19, y: -34300.355}
+  m_AnchoredPosition: {x: 50000, y: -34302.457}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1403006762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403006760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865c42b8d52be0444a18443fb94d1853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryHUDView
-  slots:
-  - {fileID: 1552524586}
-  - {fileID: 1940213271}
-  - {fileID: 1142391303}
 --- !u!114 &1403006763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61628,7 +61623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_TagString
@@ -61682,8 +61677,8 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 254943698}
+      insertIndex: 0
+      addedObject: {fileID: 1158957497}
     - targetCorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1711763531}
