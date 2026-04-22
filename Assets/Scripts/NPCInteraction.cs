@@ -18,13 +18,6 @@ public class NPCInteraction : MonoBehaviour
     public Animator npcAnimator;
     public List<AnimationStep> animationSequence = new List<AnimationStep>();
 
-    [Header("Punto de interacción (Empty opcional)")]
-    public Transform interactionPoint;
-
-    [Header("Recompensa")]
-    public GameObject itemDinero;
-    public GameObject itemCarta;
-
     private bool isInteracting = false;
 
     // Referencias jugador
@@ -45,8 +38,6 @@ public class NPCInteraction : MonoBehaviour
         if (npcAnimator != null)
             npcAnimator.applyRootMotion = false;
 
-        if (itemDinero != null) itemDinero.SetActive(false);
-        if (itemCarta != null) itemCarta.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -93,16 +84,6 @@ public class NPCInteraction : MonoBehaviour
         // 🔒 BLOQUEAR
         LockPlayer();
 
-        // 🎯 MIRAR AL EMPTY
-        if (interactionPoint != null)
-        {
-            Vector3 dir = interactionPoint.position - player.transform.position;
-            dir.y = 0;
-
-            if (dir != Vector3.zero)
-                player.transform.rotation = Quaternion.LookRotation(dir);
-        }
-
         // 🎭 ANIMACIONES
         if (npcAnimator != null)
         {
@@ -116,19 +97,9 @@ public class NPCInteraction : MonoBehaviour
             }
         }
 
-        // 🎁 RECOMPENSAS
-        if (itemDinero != null)
-            itemDinero.SetActive(true);
-
-        if (itemCarta != null)
-            itemCarta.SetActive(true);
-
-        // 🟢 MENSAJE EN CONSOLA
-        Debug.Log("🎉 Conseguite estos items: Dinero y Carta");
 
         // 🔓 DESBLOQUEAR
         RestorePlayer();
-
         isInteracting = false;
     }
 
